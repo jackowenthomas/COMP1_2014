@@ -130,6 +130,8 @@ def IsNextCardHigher(LastCard, NextCard):
 def GetPlayerName():
   print()
   PlayerName = input('Please enter your name: ')
+  while len(PlayerName) == 0:
+      PlayerName = input("Please enter your name: ")
   print()
   return PlayerName
 
