@@ -135,7 +135,9 @@ def GetPlayerName():
 
 def GetChoiceFromUser():
   Choice = input('Do you think the next card will be higher than the last card (enter y or n)? ')
-  return Choice
+  Choice = Choice [0]
+  return Choice.lower()
+
 
 def DisplayEndOfGameMessage(Score):
   print()
