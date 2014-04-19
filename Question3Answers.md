@@ -18,4 +18,8 @@ FUNCTION GetPlayerName()
 ##Question 3b answers
 1.GetPlayerName()
 
+##Question 5 answers
+1. import datetime
+2. displayrecentscore,updaterecentscore,resetrecentscore,playgame
+3. 
 		

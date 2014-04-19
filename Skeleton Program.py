@@ -6,6 +6,7 @@
 
 
 import random
+import datetime
 
 NO_OF_RECENT_SCORES = 3
 
