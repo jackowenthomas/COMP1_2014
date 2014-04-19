@@ -1,5 +1,5 @@
 #Task Sheet 1 Questions
-##Question 3 Answers
+##Question 3a Answers
 
 1. GetPlayerName()
 2. By using the while loop and the length (len) statement it keeps on asking the user until a name is entered
@@ -14,4 +14,8 @@ FUNCTION GetPlayerName()
 		ValidName == False
 	ValidName == True
 	RETURN PlayerName
+	
+##Question 3b answers
+1.GetPlayerName()
+
 		
