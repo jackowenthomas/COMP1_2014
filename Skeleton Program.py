@@ -129,14 +129,22 @@ def IsNextCardHigher(LastCard, NextCard):
 
 def GetPlayerName():
   print()
-  ValidName = False
-  PlayerName = input('Please enter your name: ')
-  while len(PlayerName) == 0:
+  NameCheck = input("Do you want to save your score to the high score table? (enter y or n)? ")
+  if NameCheck == "n":
+      DisplayMenu()
+  if NameCheck == "y":
+    ValidName = False
+    PlayerName = input('Please enter your name: ')
+    while len(PlayerName) == 0:
       PlayerName = input("Please enter your name: ")
       ValidName = False
-  ValidName = True
-  print()
-  return PlayerName
+    ValidName = True
+    print()
+    return PlayerName
+  else:
+    print("That is not a valid option")
+    GetPlayerName()
+    
 
 def GetChoiceFromUser():
   Choice = input('Do you think the next card will be higher than the last card (enter y or n)? ')
