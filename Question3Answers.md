@@ -21,5 +21,7 @@ FUNCTION GetPlayerName()
 ##Question 5 answers
 1. import datetime
 2. displayrecentscore,updaterecentscore,resetrecentscore,playgame
-3. 
+3. You create a datetime object by converting a string to a datetime object using the strptime() function
+   datetime.datetime.strptime(date_string, date_time_format) converts a string to a datetime object.
+   to display this you use strftime() function, datetime.datetime.strftime("%d/%m/%y")
 		
