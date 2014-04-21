@@ -132,8 +132,8 @@ def GetPlayerName():
   print()
   NameCheck = input("Do you want to save your score to the high score table? (enter y or n)? ")
   if NameCheck == "n":
-      DisplayMenu()
-  if NameCheck == "y":
+    DisplayMenu()
+  elif NameCheck == "y":
     ValidName = False
     PlayerName = input('Please enter your name: ')
     while len(PlayerName) == 0:
@@ -142,9 +142,11 @@ def GetPlayerName():
     ValidName = True
     print()
     return PlayerName
-  else:
+  elif NameCheck != "n" or NameCheck != "y":
     print("That is not a valid option")
     GetPlayerName()
+    
+
     
 
 def GetChoiceFromUser():
