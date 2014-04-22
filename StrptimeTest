@@ -1,0 +1,6 @@
+import datetime
+NewDay = datetime.date(2004,2,15)
+print(NewDay)
+stringDay = "2004-2-15"
+newDay2 = datetime.datetime.strptime(stringDay,"%Y-%m-%d")
+print(newDay2)
