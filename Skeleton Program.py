@@ -24,10 +24,12 @@ class TRecentScore():
 Deck = [None]
 RecentScores = [None]
 Choice = ''
+RankOfAce = False
+
 
 def GetRank(RankNo):
   Rank = ''
-  if RankNo == 1:
+  if RankNo == 1 or RankNo == 14:
     Rank = 'Ace'
   elif RankNo == 2:
     Rank = 'Two'
@@ -79,6 +81,37 @@ def DisplayMenu():
   print()
   print('Select an option from the menu (or enter q to quit): ', end='')
 
+def DisplayOptions():
+  print()
+  print('OPTIONS MENU')
+  print()
+  print('1. Set Ace to be HIGH or LOW')
+  print()
+  
+
+def GetOptionsChoice():
+  OptionChoice = input('Select an option from the menu (or enter q to quit): ')
+  print()
+  return OptionChoice
+
+def SetOptionsChoice(OptionChoice):
+  if OptionChoice == '1':
+    SetAceHighOrLow()
+
+
+def SetAceHighOrLow():
+  global RankOfAce
+  HighOrLow = input('Do you want Ace to be (h)igh or (l)ow: ')
+  HighOrLow = HighOrLow.lower()[0]
+  if HighOrLow == 'h':
+    RankOfAce = True
+    DisplayMenu()
+  elif HighOrLow == 'l':
+    RankOfAce = False
+    DisplayMenu()
+    
+  
+
 def GetMenuChoice():
   Choice = input()
   
@@ -86,6 +119,7 @@ def GetMenuChoice():
   return Choice.lower()
 
 def LoadDeck(Deck):
+  global RankOfAce
   CurrentFile = open('deck.txt', 'r')
   Count = 1
   while True:
@@ -96,6 +130,8 @@ def LoadDeck(Deck):
     Deck[Count].Suit = int(LineFromFile)
     LineFromFile = CurrentFile.readline()
     Deck[Count].Rank = int(LineFromFile)
+    if RankOfAce == True and Deck[Count].Rank == 1:
+      Deck[Count].Rank = 14
     Count = Count + 1
  
 def ShuffleDeck(Deck):
@@ -249,8 +285,8 @@ if __name__ == '__main__':
   for Count in range(1, NO_OF_RECENT_SCORES + 1):
     RecentScores.append(TRecentScore())
   Choice = ''
+  DisplayMenu()
   while Choice != 'q':
-    DisplayMenu()
     Choice = GetMenuChoice()
     if Choice == '1':
       LoadDeck(Deck)
@@ -263,3 +299,9 @@ if __name__ == '__main__':
       DisplayRecentScores(RecentScores)
     elif Choice == '4':
       ResetRecentScores(RecentScores)
+    elif Choice == '5':
+      DisplayOptions()
+      OptionChoice = GetOptionsChoice()
+      if OptionChoice == '1':
+        SetAceHighOrLow()
+      
