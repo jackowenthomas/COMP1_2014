@@ -97,6 +97,7 @@ def GetOptionsChoice():
 def SetOptionsChoice(OptionChoice):
   if OptionChoice == '1':
     SetAceHighOrLow()
+ 
 
 
 def SetAceHighOrLow():
