@@ -49,6 +49,31 @@ are passed by value
 so it can not be used more than once.
 
 ##Question 6 Answers
-1. GetRank()
+1. Global Variable - So you can use it anywhere easily.
 2. DisplayMenu()
 3. 
+
+##Q6 Pseudocode
+FUNCTION DisplayOptions():
+	OUTPUT('OPTIONS MENU')
+	OUTPUT()
+	OUTPUT('1. Set Ace to be HIGH or Low')
+	
+FUNCTION GetOptionsChoice():
+	OptionChoice == INPUT('Select an option from the menu (or enter q to quit): ')
+	RETURN OptionChoice
+	
+FUNCTION SetOptionsChoice(OptionChoice):
+	IF OptionChoice = '1':
+	 SetAceHighOrLow()
+
+FUNCTION SetAceHighOrLow():
+	GLOBAL RankOfAce
+	HighOrLow == INPUT('Do you want Ace to be (h)igh or (l)ow: ')
+	HighOrLow == HighOrLow.lower()[0]
+	IF HighOrLow = 'h':
+		RankOfAce == True
+		DisplayMenu
+	ELIF HighOrLow = 'l':
+		RankOfAce == False
+		DisplayMenu()
