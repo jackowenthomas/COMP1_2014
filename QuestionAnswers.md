@@ -47,3 +47,8 @@ are passed by value
 
 2. Passing by reference = When a parameter is passed down from the main memory into a function it does not create a copy of that parameter
 so it can not be used more than once.
+
+##Question 6 Answers
+1. GetRank()
+2. DisplayMenu()
+3. 
