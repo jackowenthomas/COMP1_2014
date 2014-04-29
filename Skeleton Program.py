@@ -98,8 +98,6 @@ def SetOptionsChoice(OptionChoice):
   if OptionChoice == '1':
     SetAceHighOrLow()
  
-
-
 def SetAceHighOrLow():
   global RankOfAce
   HighOrLow = input('Do you want Ace to be (h)igh or (l)ow: ')
@@ -111,8 +109,6 @@ def SetAceHighOrLow():
     RankOfAce = False
     DisplayMenu()
     
-  
-
 def GetMenuChoice():
   Choice = input()
   
@@ -180,6 +176,7 @@ def GetPlayerName():
       PlayerName = input("Please enter your name: ")
       ValidName = False
     ValidName = True
+    DisplayMenu()
     print()
     return PlayerName
   elif NameCheck != "n" or NameCheck != "y":
