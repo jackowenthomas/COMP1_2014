@@ -227,6 +227,8 @@ def DisplayRecentScores(RecentScores):
   input()
   print()
 
+def BubbleSortScores(RecentScores):
+
 def UpdateRecentScores(RecentScores, Score):
   PlayerName = GetPlayerName()
   FoundSpace = False
