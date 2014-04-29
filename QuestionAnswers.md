@@ -81,7 +81,10 @@ FUNCTION SetAceHighOrLow():
 ##Testing
 
 
-|Test Number|Test Description|Test Data|Type|Expected Result|Actual Result|
-|-----------|----------------|---------|----|---------------|-------------|
-|     1     |        2       |    3    | 4  |     5         |    6        |
-|    3      |       4        |    32   | 4  |   88          |     9       |
+|Test Number|Test Description|Test Data|  Type |       Expected Result       |        Actual Result        |
+|-----------|----------------|---------|-------|-----------------------------|-----------------------------|
+|     1     |OptionsMenu Test|    5    | Normal|Shows the option display menu|Shows the option display menu|
+|           |                |         |       |                             |             |             
+|           |                |         |       |                             |             |             
+|           |                |         |       |                             |             |             
+|           |                |         |       |                             |             |                           
