@@ -51,7 +51,7 @@ so it can not be used more than once.
 ##Question 6 Answers
 1. Global Variable - So you can use it anywhere easily.
 2. DisplayMenu()
-3. 
+3. GetRank()
 
 ##Q6 Pseudocode
 FUNCTION DisplayOptions():
@@ -77,3 +77,11 @@ FUNCTION SetAceHighOrLow():
 	ELIF HighOrLow = 'l':
 		RankOfAce == False
 		DisplayMenu()
+
+##Testing
+###Testing
+In the previous section you made significant changes to the program. These changes must be tested to ensure that the program functions correctly. Using the **headings given below** to help you, write a test plan for your changes.
+
+|Test Number|Test Description|Test Data|Type|Expected Result|Actual Result|
+|-----------|----------------|---------|----|---------------|-------------|
+ hello       my               name      is    jack            thomas
