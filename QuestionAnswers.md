@@ -79,9 +79,9 @@ FUNCTION SetAceHighOrLow():
 		DisplayMenu()
 
 ##Testing
-###Testing
-In the previous section you made significant changes to the program. These changes must be tested to ensure that the program functions correctly. Using the **headings given below** to help you, write a test plan for your changes.
+
 
 |Test Number|Test Description|Test Data|Type|Expected Result|Actual Result|
 |-----------|----------------|---------|----|---------------|-------------|
- hello       my               name      is    jack            thomas
+|     1     |        2       |    3    | 4  |     5         |    6        |
+|-----------|----------------|---------|----|---------------|-------------|
