@@ -84,7 +84,7 @@ FUNCTION SetAceHighOrLow():
 |Test Number|Test Description|Test Data|  Type |       Expected Result       |        Actual Result        |
 |-----------|----------------|---------|-------|-----------------------------|-----------------------------|
 |     1     |OptionsMenu Test|    5    | Normal|Shows the option display menu|Shows the option display menu|
-|           |                |         |       |                             |             |             
-|           |                |         |       |                             |             |             
+|        2|          4      |     7    |     boundary|               fwefw              |         fwfwf                    |             
+|           |                |         |       |                             |            |             
 |           |                |         |       |                             |             |             
 |           |                |         |       |                             |             |                           
