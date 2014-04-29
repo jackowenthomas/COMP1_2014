@@ -98,6 +98,8 @@ def SetOptionsChoice(OptionChoice):
   if OptionChoice == '1':
     SetAceHighOrLow()
  
+
+
 def SetAceHighOrLow():
   global RankOfAce
   HighOrLow = input('Do you want Ace to be (h)igh or (l)ow: ')
@@ -109,6 +111,8 @@ def SetAceHighOrLow():
     RankOfAce = False
     DisplayMenu()
     
+  
+
 def GetMenuChoice():
   Choice = input()
   
