@@ -179,8 +179,7 @@ def GetPlayerName():
     DisplayMenu()
     print()
     return PlayerName
-  elif NameCheck != "n" or NameCheck != "y":
-    print("That is not a valid option")
+  else:
     GetPlayerName()
     
 
@@ -228,6 +227,16 @@ def DisplayRecentScores(RecentScores):
   print()
 
 def BubbleSortScores(RecentScores):
+   unsorted = True
+   while unsorted:
+        unsorted = False
+        for Count in range(1,len(RecentScores)-1):
+          if RecentScores[Count].Score < RecentScores[Count + 1].Score:
+            hold = RecentScores[Count + 1]
+            RecentScores[Count + 1] = RecentScores[Count]
+            RecentScores[Count] = hold
+            unsorted = True
+   return RecentScores          
 
 def UpdateRecentScores(RecentScores, Score):
   PlayerName = GetPlayerName()
@@ -296,6 +305,7 @@ if __name__ == '__main__':
       LoadDeck(Deck)
       PlayGame(Deck, RecentScores)
     elif Choice == '3':
+      BubbleSortScores(RecentScores)
       DisplayRecentScores(RecentScores)
     elif Choice == '4':
       ResetRecentScores(RecentScores)
