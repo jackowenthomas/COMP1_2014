@@ -8,7 +8,7 @@
 import random
 import datetime
 
-NO_OF_RECENT_SCORES = 3
+NO_OF_RECENT_SCORES = 10
 
 class TCard():
   def __init__(self):
@@ -78,6 +78,7 @@ def DisplayMenu():
   print('3. Display recent scores')
   print('4. Reset recent scores')
   print('5. Options')
+  print('6. Save high scores')
   print()
   print('Select an option from the menu (or enter q to quit): ', end='')
 
@@ -259,7 +260,9 @@ def UpdateRecentScores(RecentScores, Score):
   RecentScores[Count].Name = PlayerName
   RecentScores[Count].Score = Score
   RecentScores[Count].Date = Date
-  
+
+def SaveScores(RecentScores):
+  with open ("save_scores.txt", mode="r", encoding="utf-8"):
 
 def PlayGame(Deck, RecentScores):
   LastCard = TCard()
@@ -315,4 +318,6 @@ if __name__ == '__main__':
       OptionChoice = GetOptionsChoice()
       if OptionChoice == '1':
         SetAceHighOrLow()
+    elif Choice == '6':
+      SaveScores(RecentScores)
       
