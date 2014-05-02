@@ -166,21 +166,21 @@ def IsNextCardHigher(LastCard, NextCard):
 
 def GetPlayerName():
   print()
-  NameCheck = input("Do you want to save your score to the high score table? (enter y or n)? ")
-  if NameCheck == "n":
-    DisplayMenu()
-  elif NameCheck == "y":
-    ValidName = False
-    PlayerName = input('Please enter your name: ')
-    while len(PlayerName) == 0:
+  ValidName = False
+  while not ValidName:
+    NameCheck = input("Do you want to save your score to the high score table? (enter y or n)? ")
+    if NameCheck == "n":
+      DisplayMenu()
+    elif NameCheck == "y":
       PlayerName = input("Please enter your name: ")
-      ValidName = False
-    ValidName = True
-    DisplayMenu()
+      if len(PlayerName) > 0:
+        ValidName = True
+        DisplayMenu()
+        return PlayerName
+      
+      
     print()
-    return PlayerName
-  else:
-    GetPlayerName()
+    
     
 
     
@@ -224,6 +224,7 @@ def DisplayRecentScores(RecentScores):
   print()
   print('Press the Enter key to return to the main menu')
   input()
+  DisplayMenu()
   print()
 
 def BubbleSortScores(RecentScores):
